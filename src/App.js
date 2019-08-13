@@ -17,7 +17,7 @@ function App() {
   // the "5" button, or the operator if they click one of those buttons) and then call your setter function to update state.
   // Don't forget to pass the functions (and any additional data needed) to the components as props
   const [memory, setMemory] = useState("0");
-
+  let holder = "";
   const changeMemory = (item) => {
     if (memory === "0") {
       setMemory(item);
