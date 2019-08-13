@@ -17,9 +17,12 @@ function App() {
   // the "5" button, or the operator if they click one of those buttons) and then call your setter function to update state.
   // Don't forget to pass the functions (and any additional data needed) to the components as props
   const [memory, setMemory] = useState("0");
-  let holder = "";
+
   const changeMemory = (item) => {
-    if (memory === "0") {
+    if (item === "=") {
+      calculate(memory);
+    }
+    else if (memory === "0") {
       setMemory(item);
     }
     else if (item === "C") {
@@ -27,6 +30,34 @@ function App() {
     }
     else {
       setMemory(memory + item);
+    }
+  }
+
+  const calculate = (string) => {
+    const operators = ["/", "*", "-", "+"];
+    let operatorIndex;
+    let operator = "";
+    for (let i = 0; i < string.length; i++) {
+      for (let element of operators) {
+        if (string.charAt(i) === element) {
+          operatorIndex = i;
+          operator = element;
+        }
+      }
+    }
+    let firstNumber = Number(string.slice(0, operatorIndex));
+    let secondNumber = Number(string.slice(operatorIndex + 1));
+    if (operator === "+") {
+      setMemory(firstNumber + secondNumber);
+    }
+    else if (operator === "-") {
+      setMemory(firstNumber - secondNumber);
+    }
+    else if (operator === "*") {
+      setMemory(firstNumber * secondNumber);
+    }
+    else if (operator === "/") {
+      setMemory(firstNumber / secondNumber);
     }
   }
 
