@@ -34,7 +34,7 @@ function App() {
   }
 
   const calculate = (string) => {
-    const operators = ["/", "*", "-", "+"];
+    const operators = ["/", "*", "-", "+", "%"];
     let operatorIndex;
     let operator = "";
     for (let i = 0; i < string.length; i++) {
@@ -58,6 +58,9 @@ function App() {
     }
     else if (operator === "/") {
       setMemory(firstNumber / secondNumber);
+    }
+    else if (operator === "%") {
+      setMemory(firstNumber % secondNumber);
     }
   }
 
