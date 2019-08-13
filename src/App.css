@@ -1,0 +1,78 @@
+.container{
+    background:#bb1233;
+    margin:0 auto;
+    width:30%;
+    border-radius:2%;
+}
+
+.logo {
+    margin-top:2%;
+    margin-left:2%;
+}
+
+.displayDiv{
+    background:#2d2829;
+    color:white;
+    text-align:right;
+    width:80%;
+    margin: 0 auto;
+    border-radius:25px;
+}
+
+.displayDiv p{
+    margin-right:2%;
+    font-size:2rem;
+    padding:3% 0%;
+}
+
+.buttonDiv{
+    display:flex;
+    flex-direction:row;
+    height:450px;
+    width:75%;
+    margin: 0 auto;
+}
+
+.specialsNumbers{
+    display:flex;
+    flex-direction:column;
+}
+
+.operatorContainer{
+    display:flex;
+    flex-direction:column;
+}
+.specialContainer{
+    display:flex;
+    justify-content: space-around;
+}
+.numberContainer{
+    display:flex;
+    flex-wrap:wrap;
+    margin-top:2%;
+    align-content:space-around;
+}
+
+button{
+    border-radius:100%;
+    border:none;
+    box-shadow: 0px 5px 0px 0px rgba(0,0,0,1);
+    background:#123c78;
+    color:white;
+    cursor:pointer;
+    height:50px;
+    width:50px;
+    
+}
+.operatorContainer button{
+    background:#3db5e5;
+    margin-bottom:65%;
+}
+
+.specialContainer button{
+    background:#2061b0;
+}
+
+.numberContainer button{
+    margin:7%;
+}
